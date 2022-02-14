@@ -19,7 +19,10 @@ router.post('/login', (req, res)=>{
 });
 
 router.get('/profile', (req, res)=>{
-    res.render('user/profile');
+    let {userid, userpw} = req.body;
+    res.render('user/profile', {
+        user
+    });
 });
 
 router.get('/logout', (req, res)=>{
