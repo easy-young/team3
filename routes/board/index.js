@@ -28,4 +28,33 @@ router.get('/view',(req,res)=>{
     })
 })
 
+router.get('/update',(req,res)=>{
+    let index = req.query.index
+    let updatedata = boarddata[index-1]
+    console.log(updatedata)
+    res.render('board/update',{
+        index:index,
+        data:updatedata
+    })
+})
+
+router.post('/update',(req,res)=>{
+    let index = req.body.index
+    let updatedata = {
+        subject:req.body.subject,
+        username:req.body.username,
+        date:req.body.date
+    }
+    boarddata[index-1] = updatedata
+    res.send(alertmove('/board/list','글수정이 완료되었습니다.'))
+})
+
+router.post('/delete',(req,res)=>{
+    let index = req.body.index-1
+    boarddata.splice(index,1) 
+    res.send(alertmove('/board/list','글삭제가 완료되었습니다.'))
+})
+
+
+
 module.exports = router;
