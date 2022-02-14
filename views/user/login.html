@@ -1,5 +1,36 @@
+
+<style>
+#id,#pw{
+    
+    height: 30px;
+    margin: 0 auto;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+#login{
+    padding-left:10px;
+    box-sizing: border-box;
+}
+
+#login>input{
+    background: blue;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+</style>
+
 <form method="post" action="/user/login">
-    id: <input type="text" name="userid">
-    pw: <input type="text" name="userpw">
-    <input type="submit" value="login">
+    <div id="id">
+        id: <input type="text" name="userid">
+    </div>
+    <div id="pw">
+        pw: <input type="text" name="userpw">
+    </div>
+    <div id="login">
+        <input type="submit" value="login">
+    </div>
+    
 </form>
