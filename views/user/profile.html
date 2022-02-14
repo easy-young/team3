@@ -17,11 +17,26 @@ strong{ color: purple;}
     text-align: center;
 }
 
-#home>button{
+/* #home>button{
     background: rebeccapurple;
     color:white;
     cursor:pointer;
     border:none;
+} */
+
+#home > ul {
+    list-style: none;
+}
+
+#home > ul > .home {
+    cursor:pointer;
+    border:none;
+}
+
+#home > ul > .home > a {
+    text-decoration: none;
+    background: rebeccapurple;
+    color:white;
 }
 
 </style>
@@ -31,15 +46,17 @@ strong{ color: purple;}
 {% block content %}
 <div id="userid">
     <strong>사용자id</strong>
-    : {{user.userid}}
+    : {{userid}}
 </div>
 <div id="userpw">
     <strong>사용자이름</strong>
-    : {{user.username}}
+    : {{username}}
 </div>
 <div id="home">
-    <button id="home" type="button" href="/" >홈으로</button>
+    <!-- <button id="home" type="button" href="/" >홈으로</button> -->
+    <ul>
+        <li class="home"><a href="/">홈으로</a></li>
+    </ul>
 </div>
 
 {% endblock %}
-

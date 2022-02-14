@@ -19,9 +19,11 @@ router.post('/login', (req, res)=>{
 });
 
 router.get('/profile', (req, res)=>{
-    let {userid, userpw} = req.body;
+    let {userid, username} = req.query;
+    console.log(userid, username);
     res.render('user/profile', {
-        user
+        userid,
+        username
     });
 });
 
