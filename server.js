@@ -24,6 +24,6 @@ app.use(express.urlencoded({extended:true}));
 
 app.use(router);
 
-app.listen(3002, ()=>{
+app.listen(3000, ()=>{
     console.log('server start 3000');
 });

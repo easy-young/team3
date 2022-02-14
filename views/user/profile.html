@@ -1,20 +1,45 @@
 {% extends "layout.html" %}
+{% block style %}
 <style>
 #userid{
     text-align: center;
     margin-top: 100px;
 }
 
-#id{
-    
+#userpw{
+    text-align: center;
 }
-</style>
 
+strong{ color: purple;}
+
+#home{
+    margin-top: 5px;
+    text-align: center;
+}
+
+#home>button{
+    background: rebeccapurple;
+    color:white;
+    cursor:pointer;
+    border:none;
+}
+
+</style>
+{% endblock %}
+
+
+{% block content %}
 <div id="userid">
-    사용자id: {{userid}}
+    <strong>사용자id</strong>
+    : {{userid}}
 </div>
 <div id="userpw">
-    사용자이름: {{username}}
+    <strong>사용자이름</strong>
+    : {{username}}
 </div>
-<button id="home" type="button" href="/" value="홈으로"></button>
+<div id="home">
+    <button id="home" type="button" href="/" >홈으로</button>
+</div>
+
+{% endblock %}
 
