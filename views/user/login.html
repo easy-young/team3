@@ -1,16 +1,27 @@
 
 <style>
+
+
+
 #id,#pw{
-    
+    text-align: center;
     height: 30px;
     margin: 0 auto;
-    padding-left: 10px;
     box-sizing: border-box;
 }
+
+#id{
+   margin-top: 100px;
+}
+
+/* #pw{
+    margin-left:0;
+} */
 
 #login{
     padding-left:10px;
     box-sizing: border-box;
+    text-align: center;
 }
 
 #login>input{
@@ -23,11 +34,13 @@
 </style>
 
 <form method="post" action="/user/login">
-    <div id="id">
-        id: <input type="text" name="userid">
-    </div>
-    <div id="pw">
-        pw: <input type="text" name="userpw">
+    <div id="idpw">
+        <div id="id">
+            id: <input type="text" name="userid">
+        </div>
+        <div id="pw">
+            pw: <input type="text" name="userpw">
+        </div>
     </div>
     <div id="login">
         <input type="submit" value="login">
