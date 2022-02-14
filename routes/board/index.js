@@ -27,3 +27,5 @@ router.get('/view',(req,res)=>{
         index:index
     })
 })
+
+module.exports = router;
